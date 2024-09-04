@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet');
+
+/* Configurações de fontes */
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 750;
+    font-style: italic;
+}
+
+.syncopate-regular {
+    font-family: "Bangers", sans-serif;
+    font-weight: 450;
+    font-style: normal;
+}
+
+.syncopate-bold {
+    font-family: "Bangers", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Estilo de fundo da página */
+body {
+    background-image: url("../../images/venomfundo.jpg");
+    background-size: cover;
+    backdrop-filter: blur(4px);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+/* Estilo da posição e da animação do trabalho1 e do 3*/
+.trabalho1, .trabalho3 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    border: none;
+    transform: translateX(-100%);
+    /* Começa deslocado para a esquerda */
+    opacity: 0;
+    /* Começa invisível */
+    animation: slideRight 3s forwards;
+    /* Animação de deslizamento */
+}
+
+/* Define a animação de deslizamento da esquerda para a direita */
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo do Texto do botão 1 e do 3 */
+.div-texto1, .div-texto3 {
+    margin-top: 72px;
+    margin-left: 90px;
+    margin-right: 220px;
+    height: 220px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    color: #ffffff;
+    border-left: solid #4e0606 4px;
+    background-color: #000000a6;
+}
+
+/* Estilo do meio da página */
+.trabalho2 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 60px;
+    border: none;
+    transform: translateX(-100%);
+    /* Começa deslocado para a esquerda */
+    opacity: 0;
+    /* Começa invisível */
+    animation: slideLeft 3s forwards;
+    /* Animação de deslizamento */
+}
+
+/* Define a animação de deslizamento da esquerda para a direita */
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo do Texto do botão 1 */
+.div-texto2 {
+    margin-top: 66px;
+    margin-right: 90px;
+    margin-left: 220px;
+    height: 245px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    width: 60%;
+    color: #ffffff;
+    border-left: solid #4e0606 4px;
+    background-color: #000000a6;
+}
+
+/* Estilo do Titulo dos trabalhos 1 e 3*/
+.titulo1{
+    font-family: "Bangers", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+/* Estilo do Titulo do trabalho 2 */
+.titulo2{
+    font-family: "Bangers", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    font-size: 40px;
+    margin-right: 5px;
+    margin-top: 15px;
+}
+
+/* Estilo do texto dos trabalhos */
+.texto1, .texto2 {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-family: "Space Mono", monospace;
+    font-size: 18px;
+    font-weight: 400;
+    font-weight: bold;
+}
+
+/* Zerando margens e preenchimentos */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Estilo da barra de navegação superior */
+.navSuperior {
+    background-color: #000000;
+    border: none;
+    border-bottom: solid #fafafa 2px;
+    display: flex;
+    margin: 0;
+}
+
+/* Cor do botão quando é clicado */
+.atividade.active {
+    background-color: #ffffff;
+    /* Cor do botão ao ser clicado */
+    color: #000000;
+    ;
+}
+
+/* Estilo dos botões de navegação superior */
+.home, .atividade {
+    background-color: #000000;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    height: 60px;
+    width: 180px;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+/* Efeito de hover nos botões de navegação superior */
+.home:hover,
+.atividade:hover {
+    background-color: #ffffff;
+    color: #261201;
+}
+
+/* Estilo do menu suspenso (dropdown) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo do conteúdo do menu suspenso, inicialmente escondido */
+.dropdown-content {
+    visibility: hidden;
+    /* Inicialmente escondido */
+    opacity: 0;
+    /* Inicialmente invisível */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Suaviza a transição */
+}
+
+/* Estilo dos links no menu suspenso */
+.dropdown-content a {
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #ffffff;
+    width: 180px;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Space Mono";
+    font-weight: bold;
+    border: none;
+    border-radius: 0%;
+    margin: 0%;
+}
+
+/* Efeito de hover nos links do menu suspenso */
+.dropdown-content a:hover {
+    background-color: #aaaaaa;
+    transition: 0.3s;
+}
+
+/* Mostrar o conteúdo do menu suspenso */
+.dropdown-content.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Classe para mostrar o menu suspenso */
+.show {
+    display: block !important;
+}
+
+/* Estilo do botão do trabalho Bandeira do Sudão */
+.bandeirasudao {
+    height: 350px;
+    width: 600px;
+    margin-left: 70px;
+    border: none;
+    border-radius: 200px;
+    background-image: url(../../trabalho/trimestre1/bandeirasudao.jpg);
+    background-size: cover;
+    transition: 1s;
+}
+
+/* Estilo do botão do trabalho 1917 filme */
+.o1917filme {
+    height: 350px;
+    width: 600px;
+    margin-right: 70px;
+    border: none;
+    border-radius: 200px;
+    background-image: url(../../trabalho/trimestre1/1917filme.jpg);
+    background-size: cover;
+    transition: 1s;
+}
+
+/* Estilo do botão do trabalho   */
+.colonizacaoafricadosul {
+    height: 350px;
+    width: 600px;
+    margin-left: 70px;
+    margin-bottom: 70px;
+    border: none;
+    border-radius: 200px;
+    background-image: url(../../trabalho/trimestre1/colonizacaoafricadosul.jpg);
+    background-size: cover;
+    transition: 1s;
+    
+}
+
+/*troca de cor dos botões do meio*/
+.bandeirasudao:hover, .o1917filme:hover, .colonizacaoafricadosul:hover{
+    transform: scale(1.15);
+}

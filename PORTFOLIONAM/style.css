@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet');
+
+/* Configurações de fontes */
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+} 
+.space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+} 
+.space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+} 
+.space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.syncopate-regular {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.syncopate-bold {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Estilo de fundo da página */
+body {
+    background-image: url("./images/aranha.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+/* Zerando margens e preenchimentos */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo da barra de navegação superior */
+.navSuperior {
+    background-color: #420000; 
+    border: none; 
+    border-bottom: solid #ff0000 2px;
+    display: flex;
+    margin: 0;
+}
+
+/* Cor do botão quando é clicado */
+.atividade.active, .tecnico.active, .extra.active {
+    background-color: rgb(204, 9, 9); /* Cor do botão ao ser clicado */
+    color: #000000;;
+}
+
+/* Estilo dos botões de navegação superior */
+.home, .atividade, .tecnico, .extra, .rotina {
+    background-color: rgb(109, 3, 3);
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    height: 60px;
+    width: 180px;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+/* Efeito de hover nos botões de navegação superior */
+.home:hover, .atividade:hover, .tecnico:hover, .rotina:hover, .extra:hover {
+    background-color: #ec0505;
+    color: #ffffff;
+}
+
+/* Estilo do menu suspenso (dropdown) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo do conteúdo do menu suspenso, inicialmente escondido */
+.dropdown-content {
+    visibility: hidden; /* Inicialmente escondido */
+    opacity: 0; /* Inicialmente invisível */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; 
+}
+
+/* Estilo dos links no menu suspenso */
+.dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #ec0505;
+    width: 180px;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Space Mono";
+    font-weight: bold;
+    border: none;
+    border-radius: 0%;
+    margin: 0%;
+}
+
+/* Efeito de hover nos links do menu suspenso */
+.dropdown-content a:hover {
+    background-color: #990000;
+    transition: 0.3s;
+}
+
+/* Mostrar o conteúdo do menu suspenso */
+.dropdown-content.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Classe para mostrar o menu suspenso */
+.show {
+    display: block !important;
+}
+
+/* Estilo dos botões inferiores */
+.navInferior {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 80px;
+    background-color: #242424; 
+    border: none; 
+    border-top: solid #000000 2px;
+    display: flex;
+    margin: 0;
+}
+
+/* Estilo dos botões de visualização e download */
+.portfolioV, .portfolioD {
+    background-color: hsl(0, 0%, 0%);
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    height: 60px;
+    width: 120px;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+/* Efeito de hover nos botões de visualização e download */
+.portfolioV:hover {
+    background-color: rgb(255, 0, 0);
+    color: #ffffff;
+}
+.portfolioD:hover {
+    background-color: rgb(255, 0, 0);
+    color: #ffffff;
+}
+
+/* Efeito de aumento nos botões de redes sociais */
+.insta:hover, .linkedin:hover, .github:hover {
+    transform: scale(1.5);
+}
+
+/* Estilo dos botões de redes sociais */
+.insta, .linkedin, .github {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    cursor: pointer;
+    margin-top: 35px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    transition: 0.5s;
+    filter: drop-shadow( -20px 10px 10px #000000ee);
+}
+
+/* Estilo específico para cada botão de rede social */
+.insta {
+    background-image: url(./images/insta.png);
+    margin-bottom: 40px;
+    filter: drop-shadow( -20px 10px 10px #000000ee);
+}
+.github {
+    background-image: url(./images/github.png);
+    margin-left: 40px;
+    margin-bottom: 40px;
+    filter: drop-shadow( -20px 10px 10px #000000ee);
+}
+
+/*Separação do layout*/
+.euI{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.euIm{
+    display: flex;
+    flex-direction:column;
+    width: 60%;
+    background-color: #420000ce;
+    border-right: solid #be0000 2px;
+    transform: translateX(-100%); /* Começa deslocado para a esquerda */
+    animation: slideRight 1s forwards; /* Animação de deslizamento */
+}
+
+/* Posição da imagem */
+.euImg-div{
+    margin-right: 50px ;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo da minha foto*/
+.euImg{
+    background-color: #ff0000ee;
+    background-image: url("./images/fotominha.jpg");
+    background-size: cover;
+    border: none;
+    justify-content: center;
+    height: 450px;
+    width: 450px;
+    filter: drop-shadow( 0px -5px 10px #4e0303ee);
+    border-radius: 100px;
+}
+
+/* Estilos dos blocos de texto */
+.carta, .primeiroP, .segundoP, .terceiroP, .contatos, .portfolios {
+    color: rgb(248, 248, 248);
+
+}
+
+/* Estilo da carta de apresentação */
+.carta {
+    margin-top: 60px;
+    margin-left: 32px;
+    font-family: "Bangers", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    transform: translateX(-100%); /* Começa deslocado para a esquerda */
+    opacity: 0; /* Começa invisível */
+    animation: slideRight 3s forwards; /* Animação de deslizamento */
+}
+
+/* Estilo dos parágrafos no conteúdo principal */
+.primeiroP, .segundoP, .terceiroP {
+    margin-top: 40px;
+    margin-left: 32px;
+    margin-right: 58px;
+    text-align:justify;
+    transform: translateX(-100%); /* Começa deslocado para a esquerda */
+    opacity: 0; /* Começa invisível */
+    animation: slideRight 4s forwards; /* Animação de deslizamento */
+}
+
+/* Define a animação de deslizamento da esquerda para a direita */
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo específico para o primeiro parágrafo */
+.primeiroP {
+    font-family: "Space Mono", monospace;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Estilo específico para o segundo parágrafo */
+.segundoP {
+    font-family: "Space Mono", monospace;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Estilo específico para o terceiro parágrafo */
+.terceiroP {
+    font-family: "Space Mono", monospace;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Estilo específico para contatos e portfolios */
+.contatos, .portfolios {
+    margin-top: 50px;
+}
+
+/* Estilo específico para fonte de portfolios */
+.portfolios{
+    font-family:"Bangers", sans-serif;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.portfoliosSub{
+    font-family:"Bangers", sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #f9f9f9;
+}
+
+.portfoliosSub2{
+    font-family:"Bangers", sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+/* Estilo do botão de contato */
+.contatos {
+    color: aliceblue;
+    text-align: center;
+    font-family: "Bangers";
+    font-weight: 700;
+    font-size: 50px;
+    width: 400px;
+    height: 40px;
+    cursor: pointer;
+}

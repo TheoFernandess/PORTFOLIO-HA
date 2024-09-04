@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Importando o Bootstrap CSS para estilos básicos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Importando o arquivo CSS personalizado -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Importando o arquivo JavaScript com o código personalizado -->
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Barra de navegação superior -->
+        <div class="navSuperior">
+
+            <button class="home" onclick="">INÍCIO</button>
+
+            <!-- Menu suspenso para atividades -->
+            <div class="dropdown">
+                <button id="colorToggleButton" class="atividade"
+                    onclick="toggleDropdown(event, 'dropdown1')">ATIVIDADES E.M.</button>
+                <div id="dropdown1" class="dropdown-content">
+                    <a href="./materias/humanas.html">Humanas</a>
+                    <a href="./materias/linguagens.html">Linguagens</a>
+                    <a href="./materias/matematica.html">Matemática</a>
+                    <a href="./materias/natureza.html">Natureza</a>
+                </div>
+            </div>
+
+            <!-- Menu suspenso para técnico -->
+            <div class="dropdown">
+                <button id="colorToggleButton2" class="tecnico"
+                    onclick="toggleDropdown(event, 'dropdown2')">TÉCNICO</button>
+                <div id="dropdown2" class="dropdown-content">
+                    <a href="./tecnico/desenvolvimento.html">Desenvolvimento</a>
+                    <a href="./tecnico/implantacao.html">Implantação</a>
+                    <a href="./tecnico/modelagem.html">Modelagem</a>
+                </div>
+            </div>
+
+            <!-- Menu suspenso para extras -->
+            <div class="dropdown">
+                <button id="colorToggleButton3" class="extra"
+                    onclick="toggleDropdown(event, 'dropdown3')">OUTROS</button>
+                <div id="dropdown3" class="dropdown-content">
+                    <a href="./extras/PPE.html">PPEs</a>
+                    <a href="./">Certificados</a>
+                    <a href="#">Link Extra</a>
+                </div>
+            </div>
+
+            <!-- Botão Rotinas -->
+            <button class="rotina" onclick="Rotinas()">ROTINA</button>
+        </div>
+    </header>
+    <main>
+
+        <div class="euI">
+            <div class="euIm">
+                <h1 class="carta">
+                    Carta de Apresentação 🕷
+                </h1>
+                <h3 class="primeiroP">
+
+                    Meu nome é Théo Fernandes, tenho 17 anos, nascido e criado em Brasília no Distrito Federal até meus 14 anos e me mudei para florianópolis e aqui estou desde então.
+                    Moro com meus pais e minha irmã, No momento estou buscando experiências novas, assim como o SESI SENAI foi uma experiência para mim, pois nunca fui alguém que gostasse muito de computador (pelo menos não a parte de programação, só os jogos.) embora eu não ache que usarei muito os conhecimentos que adquiri com toda essa experiência, pois não planejo continuar na área.
+                    Desde pequeno tenho uma fixação com desenhos e filmes, talvez meu futuro vá girar em volta disso, nada garantido como sempre... 
+
+
+                </h3>
+                <h3 class="primeiroP">
+
+                        Minha rotina normalmente se volta a ler um pouco, estudar desenvolvimento de desenho como por exemplo criação de personagem e de universos cinematográficos. 
+
+                </h3>
+            </div>
+            <div class="euImg-div">
+                <button id="playButton" class="euImg"></button> 
+                <div>
+                    <h2 class="contatos">CONTATO 🕷</h2>
+                </div>
+                <div> <!-- Botões redes sociais -->
+                    <button class="insta" onclick="Insta()"></button>
+                    <button class="github" onclick="Github()"></button>
+                </div>
+            </div>
+        </div>
+        <div class="navInferior"><!-- Separador Inferior -->
+            
+            
+            <div class="euF">
+                <h1 class="portfolios">Currículo</h1>
+                <h6 class="portfoliosSub2">Segredo!</h6>
+                <div>
+                    <a href="./curriculo/curriculo.html"><button class="portfolioV">Ver</button></a>
+                </div>
+            </div>
+
+            <div class="euF">
+
+                <h1 class="portfolios">Portfólio 2023</h1>
+                <h6 class="portfoliosSub">(Você será redirecionado para outra página)</h6>
+                <div>
+                    <a target="_blank" href="https://www.canva.com/design/DAFnNrn2poY/Ij3jsaUhso69cYqyh0k3Ig/edit?utm_content=DAFnNrn2poY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"><button class="portfolioV">Ver</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

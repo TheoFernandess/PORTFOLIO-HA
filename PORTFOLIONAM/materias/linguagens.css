@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet');
+
+/* Configurações de fontes */
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+} 
+.space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+} 
+.space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+} 
+.space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.syncopate-regular {
+    font-family: "Bangers", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+  .syncopate-bold {
+    font-family: "Bangers", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Estilo de fundo da página */
+body{
+    background-image: url("../images/aranhapapelfundo.png");
+    background-size: cover;
+    backdrop-filter: blur(4px);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+/* Zerando margens e preenchimentos */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Estilo da barra de navegação superior */
+.navSuperior {
+    background-color: #5a1717;
+    border: none;
+    border-bottom: solid #D9B68B 2px;
+    display: flex;
+    margin: 0;
+}
+
+/* Cor do botão quando é clicado */
+.atividade.active, .tecnico.active, .extra.active {
+    background-color: #D9B68B; /* Cor do botão ao ser clicado */
+    color: #ffffff;
+}
+
+/* Estilo dos botões de navegação superior */
+.home, .atividade, .tecnico, .extra, .rotina {
+    background-color: #5a1717;
+    border: none;
+    color: #D9B68B;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    height: 60px;
+    width: 180px;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+/* Efeito de hover nos botões de navegação superior */
+.home:hover, .atividade:hover, .tecnico:hover, .rotina:hover, .extra:hover {
+    background-color: #D9B68B;
+    color: #261201;
+}
+
+/* Estilo do menu suspenso (dropdown) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo do conteúdo do menu suspenso, inicialmente escondido */
+.dropdown-content {
+    visibility: hidden; /* Inicialmente escondido */
+    opacity: 0; /* Inicialmente invisível */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Suaviza a transição */
+}
+
+/* Estilo dos links no menu suspenso */
+.dropdown-content a {
+    color: #6d1010;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #D9B68B;
+    width: 180px;
+    cursor: pointer;
+    text-align: center;
+    font-family: "Space Mono";
+    font-weight: bold;
+    border: none;
+    border-radius: 0%;
+    margin: 0%;
+}
+
+/* Efeito de hover nos links do menu suspenso */
+.dropdown-content a:hover {
+    background-color: #A6855D;
+    transition: 0.3s;
+}
+
+/* Mostrar o conteúdo do menu suspenso */
+.dropdown-content.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Classe para mostrar o menu suspenso */
+.show {
+    display: block !important;
+}
+
+/* Estilo do meio da página */
+.navMeio{
+    background-size: cover;
+    display: flex;
+    margin-top: 200px;
+    padding-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Estilo das posições do botaoT2 e T3 */
+.div-botao2, .div-botao3{
+    margin-left: 100px;
+}
+
+/*troca de cor dos botões do meio*/
+.botaoT1:hover, .botaoT2:hover, .botaoT3:hover{
+    background-color: #D9B68B;
+    color: #460505;
+    filter: drop-shadow(-5px -5px 10 #D9B68B);
+    transform: scale(1.5);
+}
+
+/*botões do meio*/
+.botaoT1, .botaoT2, .botaoT3{
+    background-color: #6d1212;
+    color: #D9B68B;
+    font-size: 30px;
+    font-family: "Space Mono";
+    font-weight: bold;
+    height: 200px;
+    width: 200px;
+    border: none;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    cursor: pointer;
+    transition: 1s;
+    filter: drop-shadow(-5px -5px 10px #261201);
+}
